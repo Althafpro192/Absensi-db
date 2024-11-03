@@ -33,5 +33,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::put('izin/{id}', [PresensiController::class, 'accIzin'])->middleware('IsAdmin');
     Route::post('dispen', [PresensiController::class, 'reqDispen']);
     Route::put('dispen/{id}', [PresensiController::class, 'accDispen'])->middleware('IsAdmin');
-    Route::resource('siswa', SiswaController::class)->middleware('IsAdmin');
 });
+
+Route::resource('siswa', SiswaController::class);
